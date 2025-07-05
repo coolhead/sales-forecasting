@@ -1,0 +1,26 @@
+# config/config.yaml
+
+data:
+  train_path: "./data/train.csv"
+  store_path: "./data/store.csv"
+  processed_path: "./data/processed_data.csv"
+
+model:
+  model_output_path: "./notebooks/xgboost_best_model.pkl"
+  predictions_output_path: "./notebooks/xgboost_predictions.csv"
+  mljar_results_path: "./outputs/AutoML_1"
+
+preprocessing:
+  drop_columns: ["Sales", "Date", "Customers"]
+  date_column: "Date"
+  filter_open: true
+  filter_sales_gt_zero: true
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+plot:
+  correlation_heatmap_path: "./notebooks/top_sales_correlations_heatmap.png"
+  figsize: [10, 6]
+

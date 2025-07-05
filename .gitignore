@@ -1,0 +1,19 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Environment
+venv/
+
+# VSCode/IDE files
+.vscode/
+.idea/
+
+# Jupyter runtime files
+.local/
+.jupyter/
+
