@@ -81,19 +81,19 @@ To forecast daily **sales** for each Rossmann store using historical sales and s
 ## Visual Insights
 
 ### Sales Distribution (Skewness)
-![Original Sales Distribution](assets/original_sales_distribution.png)
+![Original Sales Distribution](assets/original_sales_distribution.jpg)
 
 ### Correlation Heatmap
-![Top Sales Correlations](assets/top_sales_correlations_heatmap.png)
+![Top Sales Correlations](assets/top_sales_correlations_heatmap.jpg)
 
 ### Promo Impact on Sales
-![Promo vs Sales](assets/promo_vs_sales_boxplot.png)
+![Promo vs Sales](assets/promo_vs_sales_boxplot.jpg)
 
 ### Model Prediction Fit
-![Prediction Scatter Plot](assets/prediction_scatter_plot.png)
+![Prediction Scatter Plot](assets/prediction_scatter_plot.jpg)
 
 ### Feature Importance - XGBoost
-![Feature Importance](assets/feature_importance_xgboost.png)
+![Feature Importance](assets/feature_importance_xgboost.jpg)
 
 ---
 
