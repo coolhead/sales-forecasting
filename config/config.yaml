@@ -21,6 +21,5 @@ split:
   random_state: 42
 
 plot:
-  correlation_heatmap_path: "./notebooks/top_sales_correlations_heatmap.png"
+  correlation_heatmap_path: "./assets/top_sales_correlations_heatmap.png"
   figsize: [10, 6]
-

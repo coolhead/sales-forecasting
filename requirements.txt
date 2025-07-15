@@ -2,10 +2,12 @@ pandas
 numpy
 scikit-learn
 matplotlib
+seaborn
+xgboost
+lightgbm
+catboost
 statsmodels
-supervised
 jupyterlab
 ipykernel
 jupytext
-seaborn
-xgboost
+

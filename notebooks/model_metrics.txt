@@ -1,0 +1,11 @@
+
+Final Model: XGBoost
+
+Test RMSE: 1103.42
+Test R²: 0.8695
+Test MAPE: 0.1058
+
+Remarks:
+- Log1p transformation was applied due to right skewness (skewness ≈ 1.59)
+- Final model uses one-hot encoded features with cleaned names
+- 6-week horizon test set used based on date split
