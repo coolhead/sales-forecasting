@@ -20,7 +20,6 @@ sales_forecasting/
 ├── requirements.txt # Python packages
 └── README.md # This file
 
-
 ---
 
 ## 🔍 Problem Statement
