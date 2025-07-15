@@ -5,21 +5,21 @@ This project forecasts 6-week future sales using a custom ML pipeline built with
 ---
 
 ## 🗂️ Project Structure
-
+```
 sales_forecasting/
 ├── data/ # Raw data (train.csv, store.csv)
 ├── notebooks/
-│ ├── sales_forecasting_RaghavendraSiddappa.ipynb ✅ My notebook
-│ ├── xgboost_predictions.csv ✅ Evaluation results
-│ ├── xgboost_future_forecast.csv ✅ 6-week forecast
-│ ├── final_xgboost_model.pkl ✅ Trained model
+│ ├── sales_forecasting_RaghavendraSiddappa.ipynb 
+│ ├── xgboost_predictions.csv  # Evaluation results
+│ ├── xgboost_future_forecast.csv # 6-week forecast
+│ ├── final_xgboost_model.pkl # Trained model
 ├── scripts/
-│ └── preprocessing.py # Optional reusable preprocessing
+│ └── preprocessing.py # reusable preprocessing
 ├── config/
 │ └── config.yaml # Reserved for future config
 ├── requirements.txt # Python packages
 └── README.md # This file
-
+```
 ---
 
 ## 🔍 Problem Statement
@@ -78,26 +78,26 @@ To forecast daily **sales** for each Rossmann store using historical sales and s
 
 ---
 
-## 📊 Visual Insights
+## Visual Insights
 
-### 📌 Sales Distribution (Skewness)
+### Sales Distribution (Skewness)
 ![Original Sales Distribution](assets/original_sales_distribution.png)
 
-### 📌 Correlation Heatmap
+### Correlation Heatmap
 ![Top Sales Correlations](assets/top_sales_correlations_heatmap.png)
 
-### 📌 Promo Impact on Sales
+### Promo Impact on Sales
 ![Promo vs Sales](assets/promo_vs_sales_boxplot.png)
 
-### 📌 Model Prediction Fit
+### Model Prediction Fit
 ![Prediction Scatter Plot](assets/prediction_scatter_plot.png)
 
-### 📌 Feature Importance - XGBoost
+### Feature Importance - XGBoost
 ![Feature Importance](assets/feature_importance_xgboost.png)
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 git clone https://github.com/your-username/sales-forecasting-xgboost.git
