@@ -1,5 +1,14 @@
 # 📊 Sales Forecasting with XGBoost | Capstone Project
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-Python%203.10-blue?style=flat-square&logo=python" />
+  <img src="https://img.shields.io/github/last-commit/coolhead/sales-forecasting?style=flat-square" />
+  <img src="https://img.shields.io/github/repo-size/coolhead/sales-forecasting?style=flat-square" />
+  <img src="https://img.shields.io/github/workflow/status/coolhead/sales-forecasting/CI?label=Build&style=flat-square" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
+</p>
+
+
 This project forecasts 6-week future sales using a custom ML pipeline built with **XGBoost**, along with detailed data preprocessing, time-aware train-test split, feature engineering, model evaluation, and future prediction.
 
 ---
