@@ -8,12 +8,21 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
 </p>
 
+<br>
 
 This project forecasts 6-week future sales using a custom ML pipeline built with **XGBoost**, along with detailed data preprocessing, time-aware train-test split, feature engineering, model evaluation, and future prediction.
 
 ---
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Feature Importance - XGBoost](#feature-importance---xgboost)
+- [How to Run](#how-to-run)
+- [.gitignore Guidelines](#make-sure-your-gitignore-includes)
+- [Acknowledgements](#-acknowledgements)
 
-## 🗂️ Project Structure
+---
+
+## Project Structure
 ```
 sales_forecasting/
 ├── data/ # Raw data (train.csv, store.csv)
@@ -31,7 +40,7 @@ sales_forecasting/
 ```
 ---
 
-## 🔍 Problem Statement
+## Problem Statement
 
 To forecast daily **sales** for each Rossmann store using historical sales and store-related data, while ensuring:
 
@@ -42,7 +51,7 @@ To forecast daily **sales** for each Rossmann store using historical sales and s
 
 ---
 
-## 🛠️ Steps Performed
+## Steps Performed
 
 1. **Data Merging & Cleaning**
    - Merged `train.csv` and `store.csv`
@@ -77,7 +86,7 @@ To forecast daily **sales** for each Rossmann store using historical sales and s
 
 ---
 
-## 📈 Sample Output
+## Sample Output
 
 | Store | Date       | Predicted_Sales |
 |-------|------------|-----------------|
@@ -108,13 +117,43 @@ To forecast daily **sales** for each Rossmann store using historical sales and s
 
 ## How to Run
 
-```bash
-git clone https://github.com/your-username/sales-forecasting-xgboost.git
-cd sales-forecasting-xgboost
-python -m venv venv
-source venv/bin/activate       # or .\venv\Scripts\activate (Windows)
-pip install -r requirements.txt
-jupyter lab
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/coolhead/sales-forecasting.git
+   cd sales-forecasting
+    ```
 
+2. **Create and activate a virtual environment:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate         # On Windows use: venv\Scripts\activate
+    ```
+3. **Install dependencies:**
+   ```bash    pip install -r requirements.txt
+    ```
+4. **Launch the Jupyter notebook:**
+   ```bash
+   jupyter lab   # if you're already inside the notebooks folder else run the below command
+   jupyter notebook notebooks/sales_forecasting_RaghavendraSiddappa.ipynb
+
+   ```
+---
+
+### Make sure your .gitignore includes:
 ```
+__pycache__/
+*.pkl
+*.ipynb_checkpoints
+.env
+.venv
+```
+---
+
+## 🙌 Acknowledgements
+
+- This project is part of the **IIIT-B & UpGrad Executive PG Program in AI/ML (ML C65)**
+- Dataset: [Rossmann Store Sales - Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/)
+- Author: Raghavendra Siddappa
+
+---`
 
