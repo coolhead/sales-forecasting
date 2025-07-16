@@ -129,10 +129,10 @@ To forecast daily **sales** for each Rossmann store using historical sales and s
     source venv/bin/activate         # On Windows use: venv\Scripts\activate
     ```
 3. **Install dependencies:**
-    ```bash    pip install -r requirements.txt
+
+    pip install -r requirements.txt
     
-    ```
-4. **Launch the Jupyter notebook:**
+5. **Launch the Jupyter notebook:**
    ```bash
    jupyter lab   # if you're already inside the notebooks folder else run the below command
    jupyter notebook notebooks/sales_forecasting_RaghavendraSiddappa.ipynb
