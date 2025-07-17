@@ -10,4 +10,4 @@ statsmodels
 jupyterlab
 ipykernel
 jupytext
-
+streamlit==1.33.0
