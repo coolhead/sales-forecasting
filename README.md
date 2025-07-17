@@ -1,4 +1,4 @@
-# 📊 Sales Forecasting with XGBoost | Capstone Project
+# Rossmann Store Sales Forecasting 
 
 <p align="center">
   <img src="https://img.shields.io/badge/Made%20with-Python%203.10-blue?style=flat-square&logo=python" />
@@ -10,36 +10,9 @@
 
 <br>
 
-This project forecasts 6-week future sales using a custom ML pipeline built with **XGBoost**, along with detailed data preprocessing, time-aware train-test split, feature engineering, model evaluation, and future prediction.
+This project predicts daily sales for Rossmann stores using historical data, promotions, holidays, and competition details. The final notebook demonstrates **three distinct approaches** to improve accuracy, interpretability, and deployability.
 
 ---
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Feature Importance - XGBoost](#feature-importance---xgboost)
-- [How to Run](#how-to-run)
-- [.gitignore Guidelines](#make-sure-your-gitignore-includes)
-- [Acknowledgements](#-acknowledgements)
-
----
-
-## Project Structure
-```
-sales_forecasting/
-├── data/ # Raw data (train.csv, store.csv)
-├── notebooks/
-│ ├── sales_forecasting_RaghavendraSiddappa.ipynb 
-│ ├── xgboost_predictions.csv  # Evaluation results
-│ ├── xgboost_future_forecast.csv # 6-week forecast
-│ ├── final_xgboost_model.pkl # Trained model
-├── scripts/
-│ └── preprocessing.py # reusable preprocessing
-├── config/
-│ └── config.yaml # Reserved for future config
-├── requirements.txt # Python packages
-└── README.md # This file
-```
----
-
 ## Problem Statement
 
 To forecast daily **sales** for each Rossmann store using historical sales and store-related data, while ensuring:
@@ -86,75 +59,87 @@ To forecast daily **sales** for each Rossmann store using historical sales and s
 
 ---
 
-## Sample Output
+## Project Structure
 
-| Store | Date       | Predicted_Sales |
-|-------|------------|-----------------|
-| 1     | 2015-07-01 | 5567.23         |
-| 1     | 2015-07-02 | 5478.14         |
-| ...   | ...        | ...             |
-
----
-
-## Visual Insights
-
-### Sales Distribution (Skewness)
-![Original Sales Distribution](assets/original_sales_distribution.jpg)
-
-### Correlation Heatmap
-![Top Sales Correlations](assets/top_sales_correlations_heatmap.jpg)
-
-### Promo Impact on Sales
-![Promo vs Sales](assets/promo_vs_sales_boxplot.jpg)
-
-### Model Prediction Fit
-![Prediction Scatter Plot](assets/prediction_scatter_plot.jpg)
-
-### Feature Importance - XGBoost
-![Feature Importance](assets/feature_importance_xgboost.jpg)
-
----
-
-## How to Run
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/coolhead/sales-forecasting.git
-   cd sales-forecasting
-    ```
-
-2. **Create and activate a virtual environment:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate         # On Windows use: venv\Scripts\activate
-    ```
-3. **Install dependencies:**
-
-    pip install -r requirements.txt
-    
-5. **Launch the Jupyter notebook:**
-   ```bash
-   jupyter lab   # if you're already inside the notebooks folder else run the below command
-   jupyter notebook notebooks/sales_forecasting_RaghavendraSiddappa.ipynb
-
-   ```
----
-
-### Make sure your .gitignore includes:
 ```
-__pycache__/
-*.pkl
-*.ipynb_checkpoints
-.env
-.venv
+sales_forecasting/
+├── notebooks/
+│   └── sales_forecasting_RaghavendraSiddappa.ipynb   # Final notebook
+├── assets/                                           # Visualizations, heatmaps, feature importance plots
+├── scripts/                                          # streamlit app.py for live demo
+├── data/                                             # raw & preprocessed data
+├── requirements.txt                                  # environment dependencies
+└── README.md                                         # you're here!
 ```
+
 ---
 
-## 🙌 Acknowledgements
+## Approaches Explained
 
-- This project is part of the **IIIT-B & UpGrad Executive PG Program in AI/ML (ML C65)**
-- Dataset: [Rossmann Store Sales - Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/)
+### 🔹 **Approach 1: Classical ML Models**
+- Models Used: Linear Regression, Decision Tree, Random Forest, XGBoost, LightGBM, CatBoost
+- Feature Engineering: Holiday flags, competition distance, promo durations
+- Outcome: MAE ~346, R² ~0.96
+
+### 🔹 **Approach 2: Store Clustering + Grouped Models**
+- Clustering using KMeans on store-wise sales patterns
+- Model per cluster for better specialization
+- Outcome: Best MAPE per cluster ~8.8%, improved explainability
+
+### 🔹 **Approach 3: Streamlit Interactive App**
+- Inputs: Store ID, Date, Promo status
+- Output: Forecasted sales instantly with user-friendly UI
+- Deployed locally using `streamlit run app.py`
+
+---
+
+## Tools & Libraries
+- Python, Pandas, NumPy, Matplotlib, Seaborn
+- XGBoost, LightGBM, CatBoost, Scikit-learn
+- KMeans (Clustering), Streamlit
+
+---
+
+## Results Summary
+
+| Approach | RMSE  | R²     | MAPE   |
+|----------|-------|--------|--------|
+| Classical | ~926 | ~0.91  | ~8.9%  |
+| Clustering | ~Varies by cluster | High | ~8.8% best |
+| Streamlit | ✓ App functional | ✓ UI Verified | Live demo |
+
+---
+
+## Insights
+- Promo duration, holiday flags, and store types play a major role.
+- Cluster-wise modeling boosts contextual accuracy.
+- Streamlit interface enables instant predictions for business users.
+
+---
+
+## How to Run the App
+
+```bash
+pip install -r requirements.txt
+cd scripts/
+streamlit run app.py
+```
+
+---
+
+## Submission File
+
+✅ **Final Notebook:** `sales_forecasting_RaghavendraSiddappa.ipynb`  
+📄 **Final PDF:** `sales_forecasting_RaghavendraSiddappa.pdf`  
+🌐 **App Interface:** `scripts/app.py` (optional)
+
+---
+
+## 🔗 Credits
+
+- Dataset: [Rossmann Store Sales](https://www.kaggle.com/c/rossmann-store-sales)
 - Author: Raghavendra Siddappa
 
 ---
 
+*For queries or improvements, feel free to open an issue or pull request!*
