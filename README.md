@@ -137,6 +137,17 @@ sales_forecasting/
 - Cluster-wise modeling boosts contextual accuracy.
 - Streamlit interface enables instant predictions for business users.
 
+## 🎯 Streamlit Sales Predictor UI
+
+This app enables real-time simulation of sales forecasts based on various inputs like promos, holidays, and dates.
+
+![Rossmann Streamlit UI](assets/streamlit_ui.jpg)
+
+**Example Output:**
+👉 Predicted Sales for Store 1 on Independence Day (2025/08/15): **€897.39**
+
+> *The interface allows stakeholders to simulate sales under different holiday and promo conditions in real time.*
+
 ---
 
 ## How to Run the App
