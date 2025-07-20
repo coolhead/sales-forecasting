@@ -10,7 +10,7 @@
 
 <br>
 
-This project predicts daily sales for Rossmann stores using historical data, promotions, holidays, and competition details. The final notebook demonstrates **three distinct approaches** to improve accuracy, interpretability, and deployability.
+This project predicts daily sales for Rossmann stores using historical data, promotions, holidays, and competition details. The final notebook demonstrates **five distinct approaches** to improve accuracy, interpretability, and deployability.
 
 ---
 ## Problem Statement
