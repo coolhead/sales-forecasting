@@ -91,6 +91,26 @@ sales_forecasting/
 - Output: Forecasted sales instantly with user-friendly UI
 - Deployed locally using `streamlit run app.py`
 
+### 🔹 **Approach 4: MLJAR AutoML Pipeline**
+- Framework: MLJAR AutoML (`mljar-supervised`) with GPU support
+- Models: LightGBM, XGBoost, CatBoost, Stacking & Ensembling
+- Performance:
+  - ✅ R² Score = **96.08%**
+  - ✅ RMSE ≈ **615**
+- Fully automated: Feature engineering, hyperparameter tuning, and validation
+- Ideal for production use and reproducibility
+- Visualizations included: `actual_vs_predicted_sales.png`, `sales_forecast_report.html`
+
+### 🔹 **Approach 5: Time Series Forecasting (SARIMA & Prophet)**
+
+- Used Facebook Prophet to model store-level time series with holiday and seasonality components.
+- Applied SARIMA (Seasonal ARIMA) for one store to understand seasonality, stationarity, and trends.
+- Performed STL decomposition to visualize trend/seasonal/residual components.
+- Evaluated predictions using MAPE for each model.
+- ✅ Prophet MAPE: ~13%
+- ✅ SARIMA MAPE (store 1): ~15%
+- These models helped validate the feasibility of classical time series approaches vs ML-based models.
+
 ---
 
 ## Tools & Libraries
@@ -102,11 +122,13 @@ sales_forecasting/
 
 ## Results Summary
 
-| Approach | RMSE  | R²     | MAPE   |
-|----------|-------|--------|--------|
-| Classical | ~926 | ~0.91  | ~8.9%  |
-| Clustering | ~Varies by cluster | High | ~8.8% best |
-| Streamlit | ✓ App functional | ✓ UI Verified | Live demo |
+| Approach         | RMSE               | R²                         | MAPE                 |
+| ---------------- | ------------------ | -------------------------- | -------------------- |
+| Classical        | \~926              | \~0.91                     | \~8.9%               |
+| Clustering       | Varies             | High                       | \~8.8% best          |
+| Streamlit        | ✓ App functional   | ✓ UI Verified              | Live demo            |
+| MLJAR AutoML     | \~615              | \~0.96                     | \~6.8%               |
+| SARIMA + Prophet | \~Varies by config | Good for trend/seasonality | Time-series specific |
 
 ---
 
@@ -127,11 +149,10 @@ streamlit run app.py
 
 ---
 
-## Submission File
+## Conclusion
 
-✅ **Final Notebook:** `sales_forecasting_RaghavendraSiddappa.ipynb`  
-📄 **Final PDF:** `sales_forecasting_RaghavendraSiddappa.pdf`  
-🌐 **App Interface:** `scripts/app.py` (optional)
+**This project implemented a wide range of machine learning and time series forecasting techniques to accurately predict Rossmann store sales. We demonstrated both model-based (XGBoost, MLJAR) and time-aware forecasting (SARIMA, Prophet) approaches. SARIMA captured weekly seasonality effectively, while Prophet offered interpretability with trend/season components. The project is reproducible, well-documented, and showcases readiness for real-world retail forecasting challenges.**
+
 
 ---
 
@@ -143,3 +164,4 @@ streamlit run app.py
 ---
 
 *For queries or improvements, feel free to open an issue or pull request!*
+
